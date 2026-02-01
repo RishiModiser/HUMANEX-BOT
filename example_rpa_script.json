@@ -1,0 +1,79 @@
+{
+  "name": "Simple Wikipedia Exploration",
+  "description": "Navigate to Wikipedia, search for a topic, and interact with the page",
+  "created_at": "2026-02-01T20:00:00.000000",
+  "modified_at": "2026-02-01T20:00:00.000000",
+  "actions": [
+    {
+      "type": "navigate",
+      "params": {
+        "url": "https://www.wikipedia.org"
+      },
+      "timestamp": "2026-02-01T20:00:00.000000"
+    },
+    {
+      "type": "wait",
+      "params": {
+        "seconds": 2
+      },
+      "timestamp": "2026-02-01T20:00:01.000000"
+    },
+    {
+      "type": "input",
+      "params": {
+        "selector": "#searchInput",
+        "text": "Artificial Intelligence",
+        "delay": 50
+      },
+      "timestamp": "2026-02-01T20:00:02.000000"
+    },
+    {
+      "type": "wait",
+      "params": {
+        "seconds": 1
+      },
+      "timestamp": "2026-02-01T20:00:03.000000"
+    },
+    {
+      "type": "click",
+      "params": {
+        "selector": "button[type='submit']",
+        "click_count": 1,
+        "button": "left"
+      },
+      "timestamp": "2026-02-01T20:00:04.000000"
+    },
+    {
+      "type": "wait",
+      "params": {
+        "seconds": 3
+      },
+      "timestamp": "2026-02-01T20:00:05.000000"
+    },
+    {
+      "type": "scroll",
+      "params": {
+        "direction": "down",
+        "amount": 500,
+        "selector": null
+      },
+      "timestamp": "2026-02-01T20:00:06.000000"
+    },
+    {
+      "type": "wait",
+      "params": {
+        "seconds": 2
+      },
+      "timestamp": "2026-02-01T20:00:07.000000"
+    },
+    {
+      "type": "scroll",
+      "params": {
+        "direction": "down",
+        "amount": 500,
+        "selector": null
+      },
+      "timestamp": "2026-02-01T20:00:08.000000"
+    }
+  ]
+}
