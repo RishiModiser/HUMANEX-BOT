@@ -1,6 +1,7 @@
 """
 HUMANEX Version 5 - User Agent Database
-10,000+ latest Android and Windows user agents for advanced fingerprinting
+3,000+ latest Android and Windows user agents for advanced fingerprinting
+(Scalable architecture supports expansion to 10,000+)
 """
 
 import random

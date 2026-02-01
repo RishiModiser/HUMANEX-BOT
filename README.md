@@ -10,7 +10,7 @@ A professional, feature-rich traffic simulation bot with advanced fingerprinting
 - **Referral Traffic Mode**: Generate authentic UTM-tracked links simulating social media, paid social, and other referral sources
 
 ### Advanced Capabilities
-- **10,000+ User Agents**: Latest Android and Windows user agents for advanced fingerprinting
+- **3,000+ User Agents**: Latest Android and Windows user agents for advanced fingerprinting (scalable to 10,000+)
 - **Proxy Support**: Multiple proxy formats with automatic rotation
   - `ip:port`
   - `ip:port:username:password`
