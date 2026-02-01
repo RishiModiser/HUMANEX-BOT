@@ -16,6 +16,10 @@ from PyQt5.QtGui import QFont
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 
+# Constants
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
+
 class BrowserWorker(QThread):
     """Worker thread to handle browser automation without blocking the GUI"""
     log_signal = pyqtSignal(str)
@@ -33,7 +37,11 @@ class BrowserWorker(QThread):
         self.log_signal.emit(log_message)
         
     def human_like_scroll(self, page):
-        """Simulate human-like scrolling behavior with randomization"""
+        """Simulate human-like scrolling behavior with randomization
+        
+        Args:
+            page: Playwright page object representing the browser page to scroll
+        """
         self.log("Starting human-like scrolling simulation...")
         
         # Get page height
@@ -90,7 +98,7 @@ class BrowserWorker(QThread):
                 self.log("Creating new browser context...")
                 context = browser.new_context(
                     viewport={'width': 1920, 'height': 1080},
-                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                    user_agent=USER_AGENT
                 )
                 
                 self.log("Opening new page...")

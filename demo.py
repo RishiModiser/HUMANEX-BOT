@@ -11,6 +11,10 @@ import random
 from datetime import datetime
 
 
+# Constants
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
+
 def log(message):
     """Print log message with timestamp"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -18,7 +22,11 @@ def log(message):
 
 
 def human_like_scroll(page):
-    """Simulate human-like scrolling behavior"""
+    """Simulate human-like scrolling behavior
+    
+    Args:
+        page: Playwright page object representing the browser page to scroll
+    """
     log("Starting human-like scrolling simulation...")
     
     # Get page height
@@ -92,7 +100,7 @@ def main():
             log("Creating new browser context...")
             context = browser.new_context(
                 viewport={'width': 1920, 'height': 1080},
-                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                user_agent=USER_AGENT
             )
             
             log("Opening new page...")
